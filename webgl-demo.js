@@ -76,8 +76,6 @@ function main() {
 
   // Draw the scene repeatedly
   function render(now) {
-    gl.canvas.width  = window.innerWidth*1/2;
-    gl.canvas.height = window.innerHeight*3/4;
     now *= 0.001;  // convert to seconds
     const deltaTime = now - then;
     then = now;
@@ -322,7 +320,7 @@ function drawScene(gl, programInfo, buffers, texture, deltaTime) {
 
   mat4.translate(modelViewMatrix,     // destination matrix
                  modelViewMatrix,     // matrix to translate
-                 [0.0, 0.5, -6.0]);  // amount to translate
+                 [0.0, 0.0, -6.0]);  // amount to translate
   mat4.rotate(modelViewMatrix,  // destination matrix
               modelViewMatrix,  // matrix to rotate
               cubeRotation,     // amount to rotate in radians
