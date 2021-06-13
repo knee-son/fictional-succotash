@@ -70,7 +70,7 @@ function main() {
   // objects we'll be drawing.
   const buffers = initBuffers(gl);
 
-  const texture = loadTexture(gl, 'https://mdn.github.io/webgl-examples/tutorial/sample6/cubetexture.png');
+  const texture = loadTexture(gl, 'kyletexture.png');
 
   var then = 0;
 
