@@ -20,7 +20,11 @@ canvas {
 }
 #visualizer {
 	background-color: #f2cde696;
-    z-index: 10;
+    z-index: 9;
 	height: 10%;
     bottom: 0;
+}
+#menu {
+	background-color: #ffffff;
+    z-index: 10;
 }
