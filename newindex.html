@@ -17,13 +17,13 @@
         audio.loop = true;
         audio.autoplay = true;
         audio.crossOrigin = "anonymous";
-        audio.addEventListener('canplay', handleCanplay);
         audio.src = "https://github.com/knee-son/fictional-succotash/blob/main/Brent%20Fayaz%20-%20Dead%20Man%20Walking.mp3";
         audio.load();
 
         const vboxcanvas = document.querySelector('#visualizer');
         const vbox = canvas.getContext('2d');
-        vboxcanvas.width  = window.innerWidth*4/7;
+        vboxcanvas.width = window.innerWidth*4/7;
+  }
     </script>
 </body>
 </html>
