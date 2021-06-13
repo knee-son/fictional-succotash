@@ -70,7 +70,7 @@ function main() {
   // objects we'll be drawing.
   const buffers = initBuffers(gl);
 
-  const texture = loadTexture(gl, 'kyletexture.png');
+  const texture = loadTexture(gl, 'https://raw.githubusercontent.com/knee-son/fictional-succotash/main/kyletexture.png');
 
   var then = 0;
 
