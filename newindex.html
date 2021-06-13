@@ -1,17 +1,29 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en"><head>
     <meta charset="utf-8">
     <title>kyle gwapo 😳</title>
     <link rel="stylesheet" href="./webgl.css" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
-      integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
-      crossorigin="anonymous" defer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js" integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ==" crossorigin="anonymous" defer="">
     </script>
-    <script src="webgl-demo.js" defer></script>
+    <script src="webgl-demo.js" defer=""></script>
   </head>
 
-  <body>
-    <canvas id="glcanvas" width="640" height="480"></canvas>
-  </body>
-</html>
+  <body style="">
+    <canvas id="glcanvas" width="268" height="545"></canvas>
+    
+    <canvas id="visualizer" width="479" height="783"></canvas>
+    
+        <script>    const audio = new Audio();
+    audio.loop = true;
+    audio.autoplay = true;
+
+    audio.crossOrigin = "anonymous";
+
+    audio.addEventListener('canplay', handleCanplay);
+    audio.src = "https://github.com/knee-son/fictional-succotash/blob/main/Brent%20Fayaz%20-%20Dead%20Man%20Walking.mp3";
+    audio.load();
+    const vboxcanvas = document.querySelector('#visualizer');
+    const vbox = canvas.getContext('2d');
+    vboxcanvas.width  = window.innerWidth*4/7;
+    </script>
+</body></html>
