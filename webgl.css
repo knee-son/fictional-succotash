@@ -5,10 +5,6 @@ html, body {
 	overflow: hidden;
 	background-color: #f6d3f0bd;
 }
-#visualizer {
-	border: 3px solid #f2cde6d6;
-	background-color: #f2cde6d6;
-}
 video {
 	display: none;
 }
@@ -18,4 +14,7 @@ canvas {
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+#visualizer {
+	background-color: #f2cde6d6;
 }
