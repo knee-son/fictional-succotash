@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="utf-8">
     <title>kyle gwapo 😳</title>
     <link rel="stylesheet" href="./webgl.css" type="text/css">
@@ -10,8 +8,9 @@
 </head>
 
 <body style="">
-    <canvas id="glcanvas" width="640" height="480"></canvas>
-    <canvas id="visualizer"></canvas>
+    <canvas id="glcanvas" width="1536" height="792"></canvas>
+    <canvas id="visualizer" width="877"></canvas>
+    <canvas id="menu" onclick="audio.play(); menu.hidden=true" hidden="">
     <script>
         const audio = new Audio();
         audio.loop = true;
@@ -25,5 +24,6 @@
         const vbox = vboxcanvas.getContext('2d');
         vboxcanvas.width = window.innerWidth*4/7;
     </script>
-</body>
-</html>
+
+
+</canvas></body></html>
