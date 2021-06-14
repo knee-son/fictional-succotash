@@ -9,7 +9,7 @@ const vboxcanvas = document.querySelector('#visualizer');
 const vbox = vboxcanvas.getContext('2d');
 
 const mcanvas = document.querySelector('#menu');
-const mbox = mcanvas.getcontext('2d');
+const mbox = mcanvas.getContext('2d');
 mbox.font = "20px Georgia";
 mbox.fillText("Hello World!", 10, 50);
 
