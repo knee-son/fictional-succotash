@@ -17,14 +17,24 @@ function run(){
     audio.play();
     document.getElementById("menu").style.display = 'none';
 }
+
 function render() {
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    // make a Web Audio Context
+    const context = new AudioContext();
+    const analyser = context.createAnalyser();
+
+    // Make a buffer to receive the audio data
+    const numPoints = analyser.frequencyBinCount;
+    const audioDataArray = new Uint8Array(numPoints);
+    
+    const width = mbox.canvas.width;
+    const height = mbox.canvas.height;
+
+    mbox.clearRect(0, 0, width, height);
 
     // get the current audio data
     analyser.getByteFrequencyData(audioDataArray);
 
-    const width = vbox.canvas.width;
-    const height = vbox.canvas.height;
     const size = 1;
 
     // draw a point every size pixels
@@ -40,6 +50,7 @@ function render() {
     requestAnimationFrame(render);
 }
 requestAnimationFrame(render);
+
 function handleCanplay() {
     // connect the audio element to the analyser node and the analyser node
     // to the main Web Audio context
