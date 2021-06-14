@@ -16,13 +16,17 @@
   <script>
     const audio = new Audio();
     audio.loop = true;
-    audio.autoplay = true;
     audio.crossOrigin = "anonymous";
     audio.src = "https://raw.githack.com/knee-son/fictional-succotash/main/Brent%20Fayaz%20-%20Dead%20Man%20Walking.mp3";
     audio.load();
 
     const vboxcanvas = document.querySelector('#visualizer');
     const vbox = vboxcanvas.getContext('2d');
+    
+    const mcanvas = document.querySelector('#menu');
+    const mbox = mcanvas.getcontext('2d');
+    mbox.font = "20px Georgia";
+    mbox.fillText("Hello World!", 10, 50);
 
     function run(){
       audio.play();
