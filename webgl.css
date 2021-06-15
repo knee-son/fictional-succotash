@@ -20,6 +20,7 @@ canvas {
 }
 #visualizer {
 	background-color: #f2cde696;
+	border-color: #f2cde696;
 	z-index: 9;
 	height: 10%;
 	bottom: 0;
