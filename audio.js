@@ -47,14 +47,14 @@ function render() {
         const y = audioValue * height;
         vbox.fillRect(x, y, size, size);
     }
+    
     requestAnimationFrame(render);
+    function handleCanplay() {
+        // connect the audio element to the analyser node and the analyser node
+        // to the main Web Audio context
+        const source = context.createMediaElementSource(audio);
+        source.connect(analyser);
+        analyser.connect(context.destination);
+    }
 }
 requestAnimationFrame(render);
-
-function handleCanplay() {
-    // connect the audio element to the analyser node and the analyser node
-    // to the main Web Audio context
-    const source = context.createMediaElementSource(audio);
-    source.connect(analyser);
-    analyser.connect(context.destination);
-}
