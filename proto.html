@@ -1,12 +1,12 @@
 <head>
     <style>
       .balls{
+        --size: clamp(5vw, 10vh, 8.5vw);
         border-radius: 50%;
         position: fixed;
-        margin: 1.5vh;
-        width: 10vh;
-        height: 10vh;
-        left: 10vw;
+        width: var(--size);
+        height: var(--size); 
+        left: calc(20vw - var(--size) / 2);
         top: 3vh;
         background-image: linear-gradient(30deg,cyan,magenta);
         animation:
@@ -14,7 +14,6 @@
         levitate 6s infinite cubic-bezier(.36,0,.64,1) alternate-reverse backwards,
         approach 12s cubic-bezier(.36,0,.64,1) infinite,
         rotate 4s linear infinite;
-        filter: hue-rotate(-20deg);
         opacity: 0;
       }
       .balls:after{
@@ -30,7 +29,7 @@
         to {opacity: .5} 
       }
       @keyframes levitate {
-        100% {left: 75vw}
+        100% {left: calc(80vw - var(--size) / 2);}
       }
       @keyframes approach{
         25% {transform: scale(.7) translateY(-3vh); opacity: .3;}
@@ -40,9 +39,6 @@
     }
       @keyframes rotate{
         50% {filter: hue-rotate(60deg)}
-    }
-      @keframes down{
-        from{opacity: 0; top: 40vh;}
     }
     </style>
 </head>
